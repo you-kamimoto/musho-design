@@ -376,7 +376,7 @@ section {
   color: #c2c2cc;
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0;
+  bottom: 3cqi;
   z-index: 1;
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
