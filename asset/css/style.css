@@ -28,6 +28,10 @@ li {
   list-style: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 section {
   -webkit-padding-before: 20cqi;
           padding-block-start: 20cqi;
@@ -59,6 +63,9 @@ section {
   height: 70px;
   width: auto;
   display: block;
+  color: black;
+}
+.Gh._top .Gh__logo-svg {
   color: white;
 }
 .Gh.-scroll .Gh__logo-svg {
@@ -99,7 +106,7 @@ section {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: white;
+  background-color: black;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -111,6 +118,9 @@ section {
 }
 .Gh__btn-line:nth-of-type(3) {
   top: 20px;
+}
+.Gh._top .Gh__btn-line {
+  background-color: white;
 }
 .Gh.-scroll .Gh__btn-line {
   background-color: black;
@@ -195,7 +205,7 @@ section {
       -ms-flex-item-align: end;
           align-self: end;
 }
-.Gh__add h2 {
+.Gh__add > h3 {
   font-weight: 400;
   font-size: 15px;
   -webkit-margin-after: 2cqi;
@@ -312,13 +322,13 @@ section {
   text-align: right;
   color: white;
 }
-.swiper-head h2 {
+.swiper-head > h3 {
   font-size: 16px;
   font-weight: 400;
   -webkit-margin-after: 0.5cqi;
           margin-block-end: 0.5cqi;
 }
-.swiper-head h3 {
+.swiper-head > p {
   font-size: 12px;
   font-weight: 400;
 }
@@ -363,7 +373,7 @@ section {
   content: "content finished";
   position: absolute;
   bottom: 3px;
-  left: 13.2%;
+  left: 170px;
   visibility: visible;
   font-size: 16px;
   font-weight: 400;
@@ -401,8 +411,6 @@ section {
   gap: 3cqi;
   -webkit-margin-after: 12cqi;
           margin-block-end: 12cqi;
-  -webkit-margin-start: auto;
-          margin-inline-start: auto;
 }
 .Wks .list__img {
   cursor: pointer;
@@ -424,11 +432,11 @@ section {
           transform: scale(1.1);
   /* 拡大 */
 }
-.Wks .list__head h2 {
+.Wks .list__head > h3 {
   font-size: 14px;
   font-weight: 400;
 }
-.Wks .list__head h3 {
+.Wks .list__head > p {
   font-size: 11px;
   font-weight: 400;
 }
@@ -454,7 +462,7 @@ section {
       -ms-flex-item-align: end;
           align-self: end;
 }
-.Ctc__add h2 {
+.Ctc__add-head {
   font-weight: 400;
   font-size: 15px;
   -webkit-margin-after: 1cqi;
@@ -566,4 +574,86 @@ section {
 }
 .opening.is-hide .opening__text::after {
   display: none;
+}
+
+.Abt .container {
+  max-width: 1200px;
+  margin-inline: 5cqi;
+}
+.Abt__ttl {
+  font-size: 26px;
+  font-weight: 400;
+  color: #c2c2cc;
+  letter-spacing: 0.1em;
+  -webkit-margin-after: 10cqi;
+          margin-block-end: 10cqi;
+}
+.Abt__in {
+  -webkit-border-before: 1px solid #c2c2cc;
+          border-block-start: 1px solid #c2c2cc;
+  -webkit-padding-before: 5cqi;
+          padding-block-start: 5cqi;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  -webkit-padding-after: 14cqi;
+          padding-block-end: 14cqi;
+}
+.Abt__in:last-child {
+  -webkit-border-after: 1px solid #c2c2cc;
+          border-block-end: 1px solid #c2c2cc;
+}
+.Abt__in > h3 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  -webkit-align-self: start;
+      -ms-flex-item-align: start;
+          align-self: start;
+}
+.Abt__in > dl {
+  display: grid;
+  gap: 3cqi;
+  -webkit-margin-before: 10cqi;
+          margin-block-start: 10cqi;
+}
+.Abt__in > dl > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  font-size: 14px;
+}
+.Abt__in > dl > div dt.clm1 {
+  display: none;
+}
+.Abt__in > dl > div dd.clm1 {
+  grid-column: 1/-1;
+  -webkit-margin-after: 3cqi;
+          margin-block-end: 3cqi;
+}
+.Abt__in > dl > div dd .map {
+  display: inline-block;
+  text-decoration: underline;
+  position: relative;
+  -webkit-padding-start: 2cqi;
+          padding-inline-start: 2cqi;
+  -webkit-margin-before: 1cqi;
+          margin-block-start: 1cqi;
+}
+.Abt__in > dl > div dd .map::before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: auto;
+  background-image: url(../img/icon_map.svg);
+  background-position: center;
+  background-size: contain;
+  aspect-ratio: 13/16;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.Abt__in > dl > div dd ol li {
+  list-style: decimal-leading-zero;
 }/*# sourceMappingURL=style.css.map */

@@ -42,6 +42,10 @@ li {
   list-style: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 section {
   padding-block-start: 20cqi;
 }
@@ -74,8 +78,15 @@ section {
       height: 70px;
       width: auto;
       display: block;
+      color: black;
+    }
+  }
+
+  &._top {
+    .Gh__logo-svg {
       color: white;
     }
+
   }
 
   &.-scroll {
@@ -126,7 +137,7 @@ section {
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: white;
+      background-color: black;
       transition: all .4s;
 
       &:nth-of-type(1) {
@@ -141,6 +152,10 @@ section {
         top: 20px;
       }
     }
+  }
+
+  &._top .Gh__btn-line {
+    background-color: white;
   }
 
   &.-scroll {
@@ -231,7 +246,7 @@ section {
 &__add {
   align-self: end;
 
-  h2 {
+  >h3 {
     font-weight: 400;
     font-size: 15px;
     margin-block-end: 2cqi;
@@ -356,13 +371,13 @@ section {
     text-align: right;
     color: white;
 
-    h2 {
+    >h3 {
       font-size: 16px;
       font-weight: 400;
       margin-block-end: .5cqi;
     }
 
-    h3 {
+    >p {
       font-size: 12px;
       font-weight: 400;
     }
@@ -412,7 +427,7 @@ section {
       content: "content finished";
       position: absolute;
       bottom: 3px;
-      left: 13.2%;
+      left: 170px;
       visibility: visible;
       font-size: 16px;
       font-weight: 400;
@@ -449,9 +464,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3cqi;
-    // margin-block-start: 12cqi;
     margin-block-end: 12cqi;
-    margin-inline-start: auto;
 
   }
 
@@ -477,12 +490,12 @@ section {
     }
 
     &__head {
-      h2 {
+      >h3 {
         font-size: 14px;
         font-weight: 400;
       }
 
-      h3 {
+      >p {
         font-size: 11px;
         font-weight: 400;
       }
@@ -512,7 +525,7 @@ section {
   &__add {
     align-self: end;
 
-    h2 {
+    &-head {
       font-weight: 400;
       font-size: 15px;
       margin-block-end: 1cqi;
@@ -606,10 +619,11 @@ section {
       font-size: 2rem;
     }
   }
-  &.is-hide {
-  animation: slideDown 0.9s cubic-bezier(.4, 0, .2, 1) forwards;
 
-}
+  &.is-hide {
+    animation: slideDown 0.9s cubic-bezier(.4, 0, .2, 1) forwards;
+
+  }
 }
 
 @keyframes blink {
@@ -629,3 +643,97 @@ section {
 .opening.is-hide .opening__text::after {
   display: none;
 }
+
+
+//about
+.Abt {
+  .container {
+    max-width: 1200px;
+    margin-inline: 5cqi;
+
+  }
+
+  &__ttl {
+    font-size: 26px;
+    font-weight: 400;
+    color: #c2c2cc;
+    letter-spacing: 0.1em;
+    margin-block-end: 10cqi;
+  }
+
+  &__in {
+    border-block-start: 1px solid #c2c2cc;
+    padding-block-start: 5cqi;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding-block-end: 14cqi;
+
+    &:last-child {
+      border-block-end: 1px solid #c2c2cc;
+    }
+
+    >h3 {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+
+    >dl {
+      display: grid;
+      gap: 3cqi;
+      margin-block-start: 10cqi;
+
+      >div {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        font-size: 14px;
+
+        dt {
+          &.clm1 {
+            display: none;
+          }
+        }
+
+        dd {
+          &.clm1 {
+            grid-column: 1 / -1;
+            margin-block-end: 3cqi;
+          }
+
+          .map {
+            display: inline-block;
+            text-decoration: underline;
+            position: relative;
+            padding-inline-start: 2cqi;
+            margin-block-start: 1cqi;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 13px;
+              height: auto;
+              background-image: url(../img/icon_map.svg);
+              background-position: center;
+              background-size: contain;
+              aspect-ratio: 13 / 16;
+              position: absolute;
+              top: 3px;
+              left: 0;
+
+            }
+          }
+          ol{
+            li{
+              list-style: decimal-leading-zero;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
