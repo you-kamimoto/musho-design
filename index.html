@@ -404,14 +404,24 @@
     });
   </script>
 
-  <script>//dark - light
+  <script>
+  const params = new URLSearchParams(window.location.search);
+  const mode = params.get('mode'); // dark / light
+
+  if (mode === 'dark') {
+    document.body.classList.add('is-dark');
+  } else if (mode === 'light') {
+    document.body.classList.add('is-light');
+  } else {
+    // 通常の時間判定
     const hour = new Date().getHours();
     if (hour >= 6 && hour < 18) {
       document.body.classList.add('is-light');
     } else {
       document.body.classList.add('is-dark');
     }
-  </script>
+  }
+</script>
 
 
 
