@@ -13,6 +13,10 @@ body.is-menu-open {
   overflow: hidden;
 }
 
+body.is-light {
+  background: #fff;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -102,14 +106,6 @@ section {
 }
 .Gh.-show {
   pointer-events: auto;
-}
-.Gh.-show .Gh__btn {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.Gh.-show .Gh__btn .dot {
-  opacity: 1;
-  background: black;
 }
 .Gh.-show .Gh__overlay {
   opacity: 1;
@@ -228,7 +224,7 @@ section {
 
 #btn {
   position: fixed;
-  inset: 5cqi 4% auto auto;
+  inset: 4cqi 2% auto auto;
   z-index: 999;
   pointer-events: auto;
 }
@@ -331,7 +327,7 @@ body.is-menu-open .menu__btn .dot {
 }
 .swiper-head {
   position: absolute;
-  right: 3%;
+  right: 6%;
   bottom: 3cqi;
   text-align: right;
   color: white;
@@ -618,100 +614,110 @@ body.is-menu-open .menu__btn .dot {
 }
 @-webkit-keyframes ani-your_css_selector_here {
   0% {
-    --c-0: hsla(266, 0%, 100%, 1);
-    --y-0: 80%;
-    --x-0: 85%;
+    --c-0: hsla(266, 1%, 12%, 1);
     --s-start-0: 9%;
     --s-end-0: 55%;
+    --y-0: 80%;
+    --x-0: 85%;
+    --x-1: 60%;
     --s-start-1: 5%;
     --s-end-1: 72%;
     --y-1: 24%;
-    --x-1: 60%;
-    --c-1: hsla(0, 0%, 38%, 1);
+    --c-1: hsla(335, 2%, 22%, 1);
+    --c-2: hsla(53, 0%, 0%, 0.49);
     --s-start-2: 5%;
     --s-end-2: 52%;
-    --c-2: hsla(0, 0%, 0%, 0.55);
-    --y-2: 82%;
     --x-2: 13%;
-    --x-3: 24%;
+    --y-2: 82%;
+    --y-3: 7%;
     --s-start-3: 13%;
     --s-end-3: 68%;
-    --c-3: hsla(299, 0%, 100%, 1);
-    --y-3: 7%;
+    --x-3: 24%;
+    --c-3: hsla(299, 4%, 36%, 1);
   }
   100% {
-    --c-0: hsla(0, 0%, 100%, 1);
-    --y-0: 94%;
-    --x-0: 31%;
+    --c-0: hsla(266, 0%, 12%, 1);
     --s-start-0: 9%;
     --s-end-0: 55%;
+    --y-0: 94%;
+    --x-0: 31%;
+    --x-1: 2%;
     --s-start-1: 5%;
     --s-end-1: 72%;
     --y-1: 25%;
-    --x-1: 2%;
-    --c-1: hsla(0, 0%, 100%, 1);
+    --c-1: hsla(0, 4%, 19%, 1);
+    --c-2: hsla(54, 0%, 0%, 0.49);
     --s-start-2: 5%;
     --s-end-2: 52%;
-    --c-2: hsla(0, 0%, 100%, 0.5);
-    --y-2: 20%;
     --x-2: 98%;
-    --x-3: 95%;
+    --y-2: 20%;
+    --y-3: 92%;
     --s-start-3: 13%;
     --s-end-3: 68%;
-    --c-3: hsla(0, 0%, 73%, 1);
-    --y-3: 92%;
+    --x-3: 95%;
+    --c-3: hsla(298, 3%, 41%, 1);
   }
 }
 @keyframes ani-your_css_selector_here {
   0% {
-    --c-0: hsla(266, 0%, 100%, 1);
-    --y-0: 80%;
-    --x-0: 85%;
+    --c-0: hsla(266, 1%, 12%, 1);
     --s-start-0: 9%;
     --s-end-0: 55%;
+    --y-0: 80%;
+    --x-0: 85%;
+    --x-1: 60%;
     --s-start-1: 5%;
     --s-end-1: 72%;
     --y-1: 24%;
-    --x-1: 60%;
-    --c-1: hsla(0, 0%, 38%, 1);
+    --c-1: hsla(335, 2%, 22%, 1);
+    --c-2: hsla(53, 0%, 0%, 0.49);
     --s-start-2: 5%;
     --s-end-2: 52%;
-    --c-2: hsla(0, 0%, 0%, 0.55);
-    --y-2: 82%;
     --x-2: 13%;
-    --x-3: 24%;
+    --y-2: 82%;
+    --y-3: 7%;
     --s-start-3: 13%;
     --s-end-3: 68%;
-    --c-3: hsla(299, 0%, 100%, 1);
-    --y-3: 7%;
+    --x-3: 24%;
+    --c-3: hsla(299, 4%, 36%, 1);
   }
   100% {
-    --c-0: hsla(0, 0%, 100%, 1);
-    --y-0: 94%;
-    --x-0: 31%;
+    --c-0: hsla(266, 0%, 12%, 1);
     --s-start-0: 9%;
     --s-end-0: 55%;
+    --y-0: 94%;
+    --x-0: 31%;
+    --x-1: 2%;
     --s-start-1: 5%;
     --s-end-1: 72%;
     --y-1: 25%;
-    --x-1: 2%;
-    --c-1: hsla(0, 0%, 100%, 1);
+    --c-1: hsla(0, 4%, 19%, 1);
+    --c-2: hsla(54, 0%, 0%, 0.49);
     --s-start-2: 5%;
     --s-end-2: 52%;
-    --c-2: hsla(0, 0%, 100%, 0.5);
-    --y-2: 20%;
     --x-2: 98%;
-    --x-3: 95%;
+    --y-2: 20%;
+    --y-3: 92%;
     --s-start-3: 13%;
     --s-end-3: 68%;
-    --c-3: hsla(0, 0%, 73%, 1);
-    --y-3: 92%;
+    --x-3: 95%;
+    --c-3: hsla(298, 3%, 41%, 1);
   }
 }
 @property --c-0 {
   syntax: "<color>";
   inherits: false;
-  initial-value: hsl(266, 0%, 100%);
+  initial-value: hsl(266, 1%, 12%);
+}
+@property --s-start-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 9%;
+}
+@property --s-end-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 55%;
 }
 @property --y-0 {
   syntax: "<percentage>";
@@ -723,15 +729,10 @@ body.is-menu-open .menu__btn .dot {
   inherits: false;
   initial-value: 85%;
 }
-@property --s-start-0 {
+@property --x-1 {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 9%;
-}
-@property --s-end-0 {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 55%;
+  initial-value: 60%;
 }
 @property --s-start-1 {
   syntax: "<percentage>";
@@ -748,15 +749,15 @@ body.is-menu-open .menu__btn .dot {
   inherits: false;
   initial-value: 24%;
 }
-@property --x-1 {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 60%;
-}
 @property --c-1 {
   syntax: "<color>";
   inherits: false;
-  initial-value: hsl(0, 0%, 38%);
+  initial-value: hsl(335, 2%, 22%);
+}
+@property --c-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(53, 0%, 0%, 0.49);
 }
 @property --s-start-2 {
   syntax: "<percentage>";
@@ -768,25 +769,20 @@ body.is-menu-open .menu__btn .dot {
   inherits: false;
   initial-value: 52%;
 }
-@property --c-2 {
-  syntax: "<color>";
+@property --x-2 {
+  syntax: "<percentage>";
   inherits: false;
-  initial-value: hsla(0, 0%, 0%, 0.55);
+  initial-value: 13%;
 }
 @property --y-2 {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 82%;
 }
-@property --x-2 {
+@property --y-3 {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 13%;
-}
-@property --x-3 {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 24%;
+  initial-value: 7%;
 }
 @property --s-start-3 {
   syntax: "<percentage>";
@@ -798,37 +794,37 @@ body.is-menu-open .menu__btn .dot {
   inherits: false;
   initial-value: 68%;
 }
+@property --x-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 24%;
+}
 @property --c-3 {
   syntax: "<color>";
   inherits: false;
-  initial-value: hsl(299, 0%, 100%);
+  initial-value: hsl(299, 4%, 36%);
 }
-@property --y-3 {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 7%;
-}
-#shimmerAnm {
+body.is-dark #shimmerAnm {
   position: relative;
 }
-#shimmerAnm::after {
+body.is-dark #shimmerAnm::after {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
-  --c-0: hsla(266, 0%, 100%, 1);
+  --c-0: hsla(266, 1%, 12%, 1);
   --y-0: 80%;
   --x-0: 85%;
-  --y-1: 24%;
   --x-1: 60%;
-  --c-1: hsla(0, 0%, 38%, 1);
-  --c-2: hsla(0, 0%, 0%, 0.55);
-  --y-2: 82%;
+  --y-1: 24%;
+  --c-1: hsla(335, 2%, 22%, 1);
+  --c-2: hsla(53, 0%, 0%, 0.49);
   --x-2: 13%;
-  --x-3: 24%;
-  --c-3: hsla(299, 0%, 100%, 1);
+  --y-2: 82%;
   --y-3: 7%;
-  background-color: hsl(0, 0%, 93%);
+  --x-3: 24%;
+  --c-3: hsla(299, 4%, 36%, 1);
+  background-color: hsl(0, 0%, 0%);
   background-image: -webkit-radial-gradient(var(--x-0) var(--y-0), circle, var(--c-0) var(--s-start-0), transparent var(--s-end-0)), -webkit-radial-gradient(var(--x-1) var(--y-1), circle, var(--c-1) var(--s-start-1), transparent var(--s-end-1)), -webkit-radial-gradient(var(--x-2) var(--y-2), circle, var(--c-2) var(--s-start-2), transparent var(--s-end-2)), -webkit-radial-gradient(var(--x-3) var(--y-3), circle, var(--c-3) var(--s-start-3), transparent var(--s-end-3));
   background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
   -webkit-animation: ani-your_css_selector_here 10s linear infinite alternate;
