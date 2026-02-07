@@ -8,7 +8,7 @@
 
   <meta name="robots" content="noindex, nofollow">
 
-  <link rel="stylesheet" href="./asset/css/reset.css">
+  <!-- <link rel="stylesheet" href="./asset/css/destyle.css"> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +85,7 @@
             </p>
             <dl>
               <dt>
-                <abbr title="Email"><span>E</span></abbr>
+                <abbr title="Email"><span>E-mail</span></abbr>
               </dt>
               <dd>
                 <span class="mailto">
@@ -108,6 +108,7 @@
 
 
   <div id="shimmerAnm" class="bg-wrap">
+
     <main>
       <section id="Mv" class="Mv">
         <div class="swiper">
@@ -208,7 +209,7 @@
         <div class="container">
           <h2 class="Abt__ttl visually-hidden">About</h2>
           <section class="Abt__in">
-            <h3>業務案内</h3>
+            <h3 style="padding-inline-start: 6px;">業務案内</h3>
             <dl>
               <div>
                 <dt class="clm1">業務案内</dt>
@@ -404,24 +405,47 @@
     });
   </script>
 
-  <script>
+<script>
   const params = new URLSearchParams(window.location.search);
-  const mode = params.get('mode'); // dark / light
 
-  if (mode === 'dark') {
-    document.body.classList.add('is-dark');
-  } else if (mode === 'light') {
-    document.body.classList.add('is-light');
-  } else {
-    // 通常の時間判定
-    const hour = new Date().getHours();
-    if (hour >= 6 && hour < 18) {
-      document.body.classList.add('is-light');
+  const updateTheme = () => {
+    let theme = 'day';
+
+    const modeParam = params.get('mode');
+
+    if (['day', 'evening', 'night'].includes(modeParam)) {
+      theme = modeParam;
     } else {
-      document.body.classList.add('is-dark');
+      const hour = new Date().getHours();
+
+      if (hour >= 18 && hour < 22) {
+        theme = 'evening';
+      } else if (hour >= 22 || hour < 6) {
+        theme = 'night';
+      }
     }
-  }
+
+    document.body?.setAttribute('data-theme', theme);
+  };
+
+  // body生成後に確実に実行
+  window.addEventListener('DOMContentLoaded', updateTheme);
 </script>
+
+
+<script>
+  const root = document.documentElement;
+
+  window.addEventListener("mousemove", (e) => {
+    root.style.setProperty("--x", e.clientX + "px");
+    root.style.setProperty("--y", e.clientY + "px");
+  });
+
+  /* 初期位置（中央にして真っ黒バグ防止） */
+  root.style.setProperty("--x", "50vw");
+  root.style.setProperty("--y", "50vh");
+</script>
+
 
 
 
