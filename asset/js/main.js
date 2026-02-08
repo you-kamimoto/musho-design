@@ -2,7 +2,7 @@
     const opening = document.querySelector('.openingAnm');
 
     // 開発用フラグtrue　本番false
-    const forceShowOpening = true;
+    const forceShowOpening = false;
 
     if (!forceShowOpening && sessionStorage.getItem('openingPlayed')) {
       // 再生済みなら非表示

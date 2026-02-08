@@ -1289,14 +1289,6 @@ body.is-menu-open .menu__btn .dot {
 body[data-theme=evening] .Ft .copy small {
   color: #88888b;
 }
-body[data-theme=evening] .Abt__in {
-  -webkit-border-before: 1px solid #88888b;
-          border-block-start: 1px solid #88888b;
-}
-body[data-theme=evening] .Abt__in:last-child {
-  -webkit-border-after: 1px solid #88888b;
-          border-block-end: 1px solid #88888b;
-}
 body[data-theme=evening] #shimmerAnm {
   position: relative;
 }
