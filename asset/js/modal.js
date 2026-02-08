@@ -91,20 +91,20 @@ document.addEventListener('DOMContentLoaded', () => {
       // メイン画像
       mainImg.src = data.images[0];
 
-      // サムネ生成
-      data.images.forEach((src, i) => {
+      // サムネ生成前にリセット
+thumbsWrap.innerHTML = ''; // ←ここを追加
+
+data.images.forEach((src, i) => {
   const liEl = document.createElement('li');
   const img = document.createElement('img');
 
   img.src = src;
 
-  // ★ここをliに付与
   if (i === 0) liEl.classList.add('is-active');
 
   img.addEventListener('click', () => {
     mainImg.src = src;
 
-    // active切替（li基準）
     thumbsWrap.querySelectorAll('li').forEach(el => el.classList.remove('is-active'));
     liEl.classList.add('is-active');
   });
