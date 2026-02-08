@@ -69,6 +69,7 @@ a {
 }
 
 img {
+    width: 100%;
   height: auto;
 }
 
@@ -156,7 +157,7 @@ section {
       width: auto;
       display: block;
       color: black;
-      
+
 
       &:hover {
         opacity: .7;
@@ -256,9 +257,11 @@ section {
             margin-right: 5px;
             margin-inline: 0;
           }
-          abbr{
+
+          abbr {
             text-decoration: none;
-            span{
+
+            span {
               font-weight: 400;
             }
           }
@@ -375,7 +378,7 @@ body.is-menu-open {
   padding-block-start: 0;
   margin-block-end: 1px;
   position: relative;
-  z-index: 100;
+  // z-index: 100;
 }
 
 .swiper-slide-active .swiper-img,
@@ -447,7 +450,7 @@ body.is-menu-open {
 
   &__list {
     position: relative;
-    z-index: 20;
+    // z-index: 20;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4.5cqi;
@@ -499,15 +502,18 @@ body.is-menu-open {
     }
 
     @media (hover: hover) {
-      &__link:hover img {
+      &__li:hover{
+        cursor: pointer;
+      }
+      &__li:hover img {
         transform: scale(1.08);
       }
 
-      &__link:hover .list__overlay {
+      &__li:hover .list__overlay {
         opacity: 1;
       }
 
-      &__link.is-active .list__overlay {
+      &__li.is-active .list__overlay {
         //sp-click
         opacity: 1;
       }
@@ -517,42 +523,120 @@ body.is-menu-open {
   }
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__content {
+  background: #fff;
+  padding: 24px;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+    color: red;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+}
+.modal__main-img {
+  width: 100%;
+  height: min(70vh, 640px); /* ← 画面に収める神指定 */
+  overflow: hidden;
+  background: #000;    
+}
+.modal__main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal__thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+.modal__thumbs li {
+  flex: 0 0 80px;  
+  aspect-ratio: 1 / 1;   /* ← 正方形固定 */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.modal__thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* ← ここが超重要 */
+  display: block;
+}
+
+.modal__thumbs li.is-active {
+  box-shadow: 0 0 0 2px #000;
+}
+
+
+.modal__link {
+  margin-top: 16px;
+  a{
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+
 
 //sec-abt
 .Abt {
-  .container {
-    // max-width: 1200px;
-    // margin-inline: 5cqi;
-    padding-inline: 5cqi;
-
-  }
 
   &__in {
-    border-block-start: 1px solid #c2c2cc;
-    padding-block-start: 5cqi;
-    display: grid;
-    grid-template-columns: 15cqi 1fr;
-    // gap: 10cqi;
-    padding-block-end: 12cqi;
+    // border-block-start: 1px solid #c2c2cc;
+    padding-block-start: 0;
+    // display: grid;
+    // grid-template-columns: 15cqi 1fr;
+    padding-block-end: 15cqi;
+    padding-inline-start: 16cqi;
+    padding-inline-end: 4cqi;
 
     &:last-child {
-      border-block-end: 1px solid #c2c2cc;
-      margin-block-end: 15cqi;
+      // border-block-end: 1px solid #c2c2cc;
+      margin-block-end: 0;
     }
 
     >h3 {
       font-size: 14px;
       font-weight: 400;
       letter-spacing: 0.1em;
-      position: sticky;
-      top: 200px;
-      align-self: start;
+      // position: sticky;
+      // top: 200px;
+      // align-self: start;
     }
 
     >dl {
       display: grid;
       gap: 3cqi;
-      margin-block-start: 10cqi;
+      margin-block-start: 6cqi;
 
       >div {
         display: grid;
@@ -561,6 +645,7 @@ body.is-menu-open {
 
         dt {
           font-weight: 400;
+
           &.clm1 {
             display: none;
           }
@@ -574,6 +659,7 @@ body.is-menu-open {
 
           ol {
             padding-inline-start: 3cqi;
+
             li {
               list-style: decimal-leading-zero;
             }
@@ -625,9 +711,11 @@ body.is-menu-open {
             display: inline-block;
             padding-right: 5px;
           }
-          abbr{
+
+          abbr {
             text-decoration: none;
-            span{
+
+            span {
               font-weight: 400;
             }
           }
@@ -941,8 +1029,18 @@ body[data-theme="evening"] {
 
 //night
 body[data-theme="night"] {
-  color: #fff;
+  color: white;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+
+  .openingAnm {
+    background: black;
+
+    &__logo {
+
+      color: white;
+
+    }
+  }
 
   .Gh.-scroll .Gh__logo-svg {
     color: white;
@@ -989,5 +1087,12 @@ body[data-theme="night"] {
       //     transparent 60%,
       //     black 75%);
 
+    }
   }
-}}
+  .modal__link {
+
+  a{
+    color: black;
+  }
+}
+}

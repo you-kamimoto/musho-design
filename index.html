@@ -8,7 +8,15 @@
 
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- <link rel="stylesheet" href="./asset/css/destyle.css"> -->
+  <!-- 1. 通常のファビコン -->
+  <link rel="icon" type="image/x-icon" href="./asset/img/favicon.ico">
+
+  <!-- 2. Apple Touch Icon（iOSホーム画面用） -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./asset/img/apple-touch-icon.png">
+
+  <!-- 3. Android / PWA 向け -->
+  <link rel="icon" type="image/png" sizes="192x192" href="./asset/img/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./asset/img/android-chrome-512x512.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +74,7 @@
       <span class="dot"></span>
     </button>
 
-    
+
     <div class="Gh__overlay"></div>
     <div class="Gh__inner">
       <div class="Gh__desc">
@@ -104,7 +112,7 @@
       </nav>
     </div>
   </header>
-  
+
 
 
   <div id="shimmerAnm" class="bg-wrap">
@@ -115,7 +123,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="swiper-img">
-                <img src="./asset/img/01.jpg" alt="" />
+                <img src="./asset/img/works/01/01.jpg" alt="" />
               </div>
               <div class="swiper-head">
                 <h3>国分寺の家</h3>
@@ -124,7 +132,7 @@
             </div>
             <div class="swiper-slide">
               <div class="swiper-img">
-                <img src="./asset/img/02.jpg" alt="" />
+                <img src="./asset/img/works/02/01.jpg" alt="" />
               </div>
               <div class="swiper-head">
                 <h3>MOONSTAR</h3>
@@ -133,7 +141,7 @@
             </div>
             <div class="swiper-slide">
               <div class="swiper-img">
-                <img src="./asset/img/03.jpg" alt="" />
+                <img src="./asset/img/works/03/01.jpg" alt="" />
               </div>
               <div class="swiper-head">
                 <h3>八ヶ岳の家 / 吉村順三(1989年)</h3>
@@ -147,69 +155,82 @@
         <div class="container">
           <h2 class="Wks__ttl visually-hidden">Works</h2>
           <ul class="Wks__list">
-            <li class="list__li">
-              <a href="#" class="list__link">
-                <div class="list__img">
-                  <img src="./asset/img/01.jpg" width="960" height="640" alt="">
-                  <div class="list__overlay">
-                    <h3>国分寺の家</h3>
-                    <p>Architecture by SHIMOKAWA</p>
-                  </div>
+            <li class="list__li" data-slug="kokubunji">
+              <div class="list__img">
+                <img src="./asset/img/works/01/01.jpg" width="960" height="640" alt="">
+                <div class="list__overlay">
+                  <h3>国分寺の家</h3>
+                  <p>Architecture by SHIMOKAWA</p>
                 </div>
-              </a>
+              </div>
             </li>
-            <li class="list__li">
-              <a href="#" class="list__link">
-                <div class="list__img">
-                  <img src="./asset/img/02.jpg" width="960" height="640" alt="">
-                  <div class="list__overlay">
-                    <h3>MOONSTAR</h3>
-                    <p>Architecture by SHIMOKAWA</p>
-                  </div>
+            <li class="list__li" data-slug="moonstar">
+              <div class="list__img">
+                <img src="./asset/img/works/02/01.jpg" width="960" height="640" alt="">
+                <div class="list__overlay">
+                  <h3>MOONSTAR</h3>
+                  <p>Architecture by SHIMOKAWA</p>
                 </div>
-              </a>
+              </div>
             </li>
-            <li class="list__li">
-              <a href="#" class="list__link">
-                <div class="list__img">
-                  <img src="./asset/img/03.jpg" width="960" height="640" alt="">
-                  <div class="list__overlay">
-                    <h3>八ヶ岳の家 / 吉村順三(1989年)</h3>
-                    <p>Architecture by SHIMOKAWA</p>
-                  </div>
+            <li class="list__li" data-slug="yatsugadake">
+              <div class="list__img">
+                <img src="./asset/img/works/03/01.jpg" width="960" height="640" alt="">
+                <div class="list__overlay">
+                  <h3>八ヶ岳の家 / 吉村順三(1989年)</h3>
+                  <p>Architecture by SHIMOKAWA</p>
                 </div>
-              </a>
+              </div>
             </li>
-            <li class="list__li">
-              <a href="#" class="list__link">
-                <div class="list__img">
-                  <img src="./asset/img/04.jpg" width="960" height="640" alt="">
-                  <div class="list__overlay">
-                    <h3>蕎麦屋</h3>
-                    <p>Architecture by SHIMOKAWA</p>
-                  </div>
+            <li class="list__li" data-slug="sobaya">
+              <div class="list__img">
+                <img src="./asset/img/works/04/01.jpg" width="960" height="640" alt="">
+                <div class="list__overlay">
+                  <h3>蕎麦屋</h3>
+                  <p>Architecture by SHIMOKAWA</p>
                 </div>
-              </a>
+              </div>
             </li>
-            <li class="list__li">
-              <a href="#" class="list__link">
-                <div class="list__img">
-                  <img src="./asset/img/05.jpg" width="960" height="640" alt="">
-                  <div class="list__overlay">
-                    <h3>喫茶 竹の熊</h3>
-                    <p>Architecture by SHIMOKAWA</p>
-                  </div>
+            <li class="list__li" data-slug="takenokuma">
+              <div class="list__img">
+                <img src="./asset/img/works/05/01.jpg" width="960" height="640" alt="">
+                <div class="list__overlay">
+                  <h3>喫茶 竹の熊</h3>
+                  <p>Architecture by SHIMOKAWA</p>
                 </div>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
       </section>
+      <!-- モーダル -->
+      <div id="modal" class="modal">
+        <div class="modal__content">
+          <button class="modal__close">×</button>
+
+          <!-- メイン画像 -->
+          <div class="modal__main-img">
+            <img src="" alt="">
+          </div>
+
+          <!-- サブ画像リスト -->
+          <ul class="modal__thumbs">
+          </ul>
+
+          <!-- テキスト / 外部リンク -->
+          <p class="modal__link">
+            <a href="#" target="_blank"></a>
+          </p>
+        </div>
+      </div>
+
+
+
       <section id="about" class="Abt">
         <div class="container">
           <h2 class="Abt__ttl visually-hidden">About</h2>
           <section class="Abt__in">
-            <h3 style="padding-inline-start: 6px;">業務案内</h3>
+            <h3>業務案内</h3>
             <dl>
               <div>
                 <dt class="clm1">業務案内</dt>
@@ -306,148 +327,6 @@
     </footer>
   </div>
 
-  <script>//opening-anime
-    const opening = document.querySelector('.openingAnm');
-
-    if (sessionStorage.getItem('openingPlayed')) {
-      opening.style.display = 'none';
-    } else {
-      sessionStorage.setItem('openingPlayed', 'true');
-    }
-
-  </script>
-
-  <script>//header-scroll
-    const scrollHeader = document.getElementById('header');
-    const hero = document.getElementById('Mv');
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          scrollHeader.classList.add('-scroll');
-        } else {
-          scrollHeader.classList.remove('-scroll');
-        }
-      },
-      {
-        threshold: 0,
-      }
-    );
-
-    observer.observe(hero);
-  </script>
-  <script>//header-menu
-    const btn = document.querySelector('.menu__btn');
-    const header = document.getElementById('header');
-    const menu = document.querySelector('.Gh');
-    const body = document.body;
-    const links = header.querySelectorAll('a');
-
-    const openMenu = () => {
-      header.classList.add('-show');
-      menu.classList.add('is-open');
-      body.classList.add('is-menu-open');
-
-      setTimeout(() => {
-        header.classList.add('is-finish');
-      }, 100);
-    };
-
-    const closeMenu = () => {
-      header.classList.remove('-show');
-      menu.classList.remove('is-open');
-      body.classList.remove('is-menu-open');
-
-      setTimeout(() => {
-        header.classList.remove('is-finish');
-      }, 100);
-    };
-
-    const toggleMenu = () => {
-      if (header.classList.contains('-show')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    };
-
-    // ボタンで開閉
-    btn.addEventListener('click', toggleMenu);
-
-    // リンククリックで閉じる
-    links.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-  </script>
-
-
-  <script>
-    // sp-click
-    const cardLinks = document.querySelectorAll('.list__link');
-
-    cardLinks.forEach(link => {
-      let tapped = false;
-
-      link.addEventListener('click', e => {
-        if (window.matchMedia('(hover: none)').matches) {
-          if (!tapped) {
-            e.preventDefault();
-            link.classList.add('is-active');
-            tapped = true;
-
-            setTimeout(() => {
-              tapped = false;
-              link.classList.remove('is-active');
-            }, 3000);
-          }
-        }
-      });
-    });
-  </script>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-
-  const updateTheme = () => {
-    let theme = 'day';
-
-    const modeParam = params.get('mode');
-
-    if (['day', 'evening', 'night'].includes(modeParam)) {
-      theme = modeParam;
-    } else {
-      const hour = new Date().getHours();
-
-      if (hour >= 18 && hour < 22) {
-        theme = 'evening';
-      } else if (hour >= 22 || hour < 6) {
-        theme = 'night';
-      }
-    }
-
-    document.body?.setAttribute('data-theme', theme);
-  };
-
-  // body生成後に確実に実行
-  window.addEventListener('DOMContentLoaded', updateTheme);
-</script>
-
-
-<script>
-  const root = document.documentElement;
-
-  window.addEventListener("mousemove", (e) => {
-    root.style.setProperty("--x", e.clientX + "px");
-    root.style.setProperty("--y", e.clientY + "px");
-  });
-
-  /* 初期位置（中央にして真っ黒バグ防止） */
-  root.style.setProperty("--x", "50vw");
-  root.style.setProperty("--y", "50vh");
-</script>
-
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -463,6 +342,11 @@
 
     });
   </script>
+
+<script src="./asset/js/main.js"></script>
+<script src="./asset/js/modal.js"></script>
+<script src="./asset/js/theme.js"></script>
+
 </body>
 
 </html>
